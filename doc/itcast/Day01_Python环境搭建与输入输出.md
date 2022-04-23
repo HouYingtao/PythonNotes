@@ -122,7 +122,7 @@ IronPython，运⾏在微软.Net平台上的Python解释器，可直接把Python
 
 ## 3、下载Python解析器
 
-下载地址：https://www.python.org/downloads/release/python-379/
+下载地址：https://www.python.org/downloads/
 
 [单击上述链接] -- 查找目标文件：Windows x86-64 executable installer -- 单
 

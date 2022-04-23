@@ -18,9 +18,9 @@
 
 ` #!/usr/bin/python3 `
 
-文件头设置编码
+文件头设置编码，python2默认使用ASCII，使用中文时需要指定文件头
 
-`# -*- coding: cp-1252 -*-`
+`# -*- coding: utf-8 -*-`
 
 
 
