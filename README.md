@@ -52,3 +52,9 @@ pip install pandas==
 pip install -U pandas==1.4.2
 ```
 
+mian函数入口
+
+```python
+if __name__ == "__main__":
+```
+
