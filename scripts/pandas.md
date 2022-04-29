@@ -38,7 +38,7 @@ df.fillna(50)
 df["编号"].replace(r'BA.$', value='NEW', regex=True, inplace = True)
 ```
 
-![pandas_replace](.\picture\pandas_replace.png)
+![pandas_replace](picture/pandas_replace.png)
 
 #####  `rank()`⽅法可以实现数据排名 
 
@@ -48,7 +48,7 @@ df["编号"].replace(r'BA.$', value='NEW', regex=True, inplace = True)
 df["排名"] = df.rank(method="dense").astype("int")
 ```
 
-![pandas_rank](.\picture\pandas_rank.png)
+![pandas_rank](picture/pandas_rank.png)
 
 #####   `clip()`方法，
 
@@ -58,7 +58,7 @@ df["排名"] = df.rank(method="dense").astype("int")
 df["迟到天数"] = df["迟到天数"].clip(0,31)
 ```
 
-![pandas_rank](.\picture\pandas_clip.png)
+![pandas_rank](picture/pandas_clip.png)
 
 #####  **唯一值** 
 
@@ -106,17 +106,16 @@ df.insert(2, "姓名",
           df["姓"].str.cat(df["名"], sep=""))
 ```
 
-![pandas_cat](.\picture\pandas_cat.png)
+![pandas_cat](picture/pandas_cat.png)
 
 ```
 df["手机号码"] = df["手机号码"].str.slice_replace(3,7,"*"*4)
 ```
 
-![pandas_slice_replace](.\picture\pandas_slice_replace.png)
+![pandas_slice_replace](picture/pandas_slice_replace.png)
 
 ```
 df["地址"].str.extract("([\u4e00-\u9fa5]+)")  
 ```
 
-![pandas_extract](.\picture\pandas_extract.png)
-
+![pandas_extract](picture/pandas_extract.png)
