@@ -1,4 +1,8 @@
->  Pandas 是基于NumPy的一种工具，该工具是为解决数据分析任务而创建的。它提供了大量能使我们快速便捷地处理数据的函数和方法。 
+[pandas用法-全网最详细教程](https://blog.csdn.net/yiyele/article/details/80605909)
+
+[Pandas常见用法总结](https://www.shuzhiduo.com/A/MyJx2DkXdn/)
+
+> Pandas 是基于NumPy的一种工具，该工具是为解决数据分析任务而创建的。它提供了大量能使我们快速便捷地处理数据的函数和方法。 
 
 
 
@@ -119,3 +123,51 @@ df["地址"].str.extract("([\u4e00-\u9fa5]+)")  
 ```
 
 ![pandas_extract](picture/pandas_extract.png)
+
+
+
+
+
+#### 读取表格文件
+
+```
+import pandas as pd
+pd.read_csv(csv_path, usecols=['col_name1', 'col_name2'], encoding='gbk')
+
+pd.read_excel(excel_path, usecols=['col_name1', 'col_name2'])
+```
+
+#### 遍历文件夹
+
+```python
+import os
+dirs = os.listdir(file_dir)
+for dir in dirs:
+    dir_path = os.path.join(file_dir, dir)
+    for root, subDirs, files in os.walk(dir_path):
+        # root 所有目录包含子目录文件夹目录的文件夹路径
+        # subDirs 所有目录包含子目录文件夹下的文件夹名称
+        # files 所有目录包含子目录文件夹下的文件名称
+```
+
+#### 创建DataFrame
+
+```
+empty_data = pd.DataFrame([], columns=['',''])
+```
+
+#### 处理数据
+
+```
+# 遍历表格处理
+data.apply(lambda x: x['colName1'].strip('\t'), axis = 1)
+
+# 表格合并
+data_concat = pd.concat(data1, data2)
+
+# 表格关联
+data_merge = data1.merge(data2, left_on = 'data1_col', right_on = 'data2_col', how = 'right')
+
+
+```
+
