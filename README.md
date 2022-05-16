@@ -52,13 +52,13 @@ pip install pandas==
 pip install -U pandas==1.4.2
 ```
 
-mian函数入口
+#### mian函数入口
 
 ```python
 if __name__ == "__main__":
 ```
 
-打印异常:
+#### 打印异常
 
 ```python
 import sys
@@ -111,7 +111,7 @@ with open('xxx.txt') as f:
     f.closed
 ```
 
-格式化
+#### 格式化
 
 ```python
 # 百分号格式化
@@ -121,6 +121,16 @@ print('字符串%格式 %格式 %格式' % (变量名称1, 变量名称2, 变量
 
 print("姓名%s，学号%06d" % (name, id))
 print("今天蔬菜特价了，%s只要%.2f元/斤。" % (title, price))
+
+# format方法格式化
+print('字符串{}'.format(变量名称1))
+print('{}字符串{}'.format(变量名称1, 变量名称2))
+print('{1}字符串{0}字符串{1}'.format(变量名称0, 变量名称1))
+
+# format方法简写形式(Python3.6+)
+name = '孙悟空'
+mobile = '18878569090'
+print(f'姓名：{name}，联系方式：{mobile}')
 ```
 
 %格式常见形式如下：
@@ -139,20 +149,4 @@ print("今天蔬菜特价了，%s只要%.2f元/斤。" % (title, price))
 | %E           | 科学计数法（大写'E'）  |
 | %g           | %f和%e的简写           |
 | %G           | %f和%E的简写           |
-
-format方法格式化
-
-```
-print('字符串{}'.format(变量名称1))
-print('{}字符串{}'.format(变量名称1, 变量名称2))
-print('{1}字符串{0}字符串{1}'.format(变量名称0, 变量名称1))
-```
-
-format方法简写形式(Python3.6以后版本)
-
-```python
-name = '孙悟空'
-mobile = '18878569090'
-print(f'姓名：{name}，联系方式：{mobile}')
-```
 
