@@ -58,6 +58,12 @@ pip install -U pandas==1.4.2
 if __name__ == "__main__":
 ```
 
+#### Shell调python
+
+```
+result = `python -c "import pandas as pd; pd......"`
+```
+
 #### 打印异常
 
 ```python
