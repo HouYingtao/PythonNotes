@@ -171,3 +171,19 @@ data_merge = data1.merge(data2, left_on = 'data1_col', right_on = 'data2_col', h
 
 ```
 
+#### 处理大数据
+
+```python
+# 读取大数据，远远快于pandas
+import datatable as dt  # pip install datatble
+
+%%time
+
+tps_dt_october = dt.fread("data/train.csv").to_pandas()
+
+# 存储文件为parquet，远远快于csv
+%%time
+
+tps_october.to_parquet("data/copy.parquet")
+```
+
