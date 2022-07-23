@@ -9,6 +9,49 @@
 >
 > python --version
 
+#### pip命令
+
+```python
+# 升级组件
+# 升级最新版本
+pip install --upgrade 包名
+pip install -U 包名
+# 升级指定版本
+pip install -U 包名==版本号
+
+# 卸载
+pip uninstall 包名
+
+# 查看某个包的信息
+pip show [-f] 包名
+
+# 查看需要被升级的包
+pip list -o
+
+# 查看兼容问题
+pip check 包名
+
+# 指定国内源安装
+pip install -i https://pypi.douban.com/simple/ 包名
+# 可用国内源
+清华：https://pypi.tuna.tsinghua.edu.cn/simple
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+华中理工大学：http://pypi.hustunique.com/
+山东理工大学：http://pypi.sdutlinux.org/ 
+豆瓣：http://pypi.douban.com/simple/
+    
+# 只下载不安装
+pip download 包名 -d "指定路径"
+如：pip download requests -d "."
+
+# 导出第三方库清单
+pip freeze > requirements.txt
+
+# 批量安装第三方库
+pip install -r requirements.txt
+```
+
 
 
 #### 在 Windows 设置环境变量
